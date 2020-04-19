@@ -231,7 +231,7 @@ AC_SUBST(ZLIB_CFLAGS)
 AC_SUBST(ZLIB_LIBS)
 
 if test "x${MYSQL_CONFIG}" = "xdefault_mysql_config"; then
-    PKG_CHECK_MODULES(MYSQL, [mysqlclient], [have_mysql="yes"], [have_mysql="no"])
+    PKG_CHECK_MODULES(MYSQL, [mariadb], [have_mysql="yes"], [have_mysql="no"])
     if test "x${have_mysql}" = "xyes"; then
         AC_SUBST(MYSQL_CFLAGS)
         AC_SUBST(MYSQL_LIBS)
